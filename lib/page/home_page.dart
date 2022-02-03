@@ -1,6 +1,9 @@
 
 
 import 'package:flutter/material.dart';
+import 'package:flutter_crud_firebase/page/add_user.dart';
+
+import 'list_user.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -20,14 +23,14 @@ class _HomePageState extends State<HomePage> {
             const Text('Flutter Firebase CRUD'),
             ElevatedButton(
                 child: const Text('Add', style: TextStyle(fontSize: 20.0),),
-                onPressed: () => {
-
+                onPressed: () => {Navigator.push(context, MaterialPageRoute(builder: (context) => AddPage()))
                 },
               style: ElevatedButton.styleFrom(primary: Colors.redAccent),
             )
           ],
         ),
       ),
+      body: ListPage(),
     );
   }
 }
